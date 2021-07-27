@@ -12,6 +12,8 @@
 		550ADF2726AFC45E0061BEFA /* StatusBarHeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550ADF2626AFC45E0061BEFA /* StatusBarHeight.swift */; };
 		550ADF2B26AFC4890061BEFA /* SetAnchors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550ADF2A26AFC4890061BEFA /* SetAnchors.swift */; };
 		550ADF5826AFDA960061BEFA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550ADF5726AFDA960061BEFA /* ViewController.swift */; };
+		550ADF5C26AFE3070061BEFA /* PhotosResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550ADF5B26AFE3070061BEFA /* PhotosResponse.swift */; };
+		550ADF5F26AFE3790061BEFA /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550ADF5E26AFE3790061BEFA /* Photo.swift */; };
 		555C778826AED93A006A2958 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555C778726AED93A006A2958 /* AppDelegate.swift */; };
 		555C779126AED93C006A2958 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 555C779026AED93C006A2958 /* Assets.xcassets */; };
 		555C779426AED93C006A2958 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 555C779226AED93C006A2958 /* LaunchScreen.storyboard */; };
@@ -93,6 +95,8 @@
 		550ADF2626AFC45E0061BEFA /* StatusBarHeight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusBarHeight.swift; sourceTree = "<group>"; };
 		550ADF2A26AFC4890061BEFA /* SetAnchors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetAnchors.swift; sourceTree = "<group>"; };
 		550ADF5726AFDA960061BEFA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		550ADF5B26AFE3070061BEFA /* PhotosResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosResponse.swift; sourceTree = "<group>"; };
+		550ADF5E26AFE3790061BEFA /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		555C778426AED93A006A2958 /* Nasa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nasa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		555C778726AED93A006A2958 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		555C779026AED93C006A2958 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -206,6 +210,15 @@
 			path = Anchors;
 			sourceTree = "<group>";
 		};
+		550ADF5A26AFE2D00061BEFA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				550ADF5B26AFE3070061BEFA /* PhotosResponse.swift */,
+				550ADF5E26AFE3790061BEFA /* Photo.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		555C777B26AED93A006A2958 = {
 			isa = PBXGroup;
 			children = (
@@ -251,6 +264,7 @@
 		555C77A426AEDD29006A2958 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				550ADF5A26AFE2D00061BEFA /* Model */,
 				555C78B426AFBC85006A2958 /* Module */,
 				555C78A826AFBB6C006A2958 /* Coordinator */,
 				555C77C126AEE83B006A2958 /* Target */,
@@ -730,6 +744,7 @@
 				555C789B26AFBAA3006A2958 /* SlidingPresentationController.swift in Sources */,
 				555C784B26AFB6CF006A2958 /* UIScrollView+ReachedBottom.swift in Sources */,
 				555C784D26AFB6CF006A2958 /* LoadingSequence+RX.swift in Sources */,
+				550ADF5F26AFE3790061BEFA /* Photo.swift in Sources */,
 				555C789126AFBAA3006A2958 /* NotificationDeepLinkAction.swift in Sources */,
 				555C788E26AFBAA3006A2958 /* Presentable.swift in Sources */,
 				555C78A026AFBAA3006A2958 /* StoriesDismissAnimationController.swift in Sources */,
@@ -757,6 +772,7 @@
 				555C789A26AFBAA3006A2958 /* SlidingTransitioningDelegate.swift in Sources */,
 				555C780126AFB12E006A2958 /* UploadService.swift in Sources */,
 				555C789526AFBAA3006A2958 /* DropdownTransitioningDelegate.swift in Sources */,
+				550ADF5C26AFE3070061BEFA /* PhotosResponse.swift in Sources */,
 				555C788D26AFBAA3006A2958 /* CoordinatorNavigationController.swift in Sources */,
 				555C789626AFBAA3006A2958 /* DropdownPresentable.swift in Sources */,
 				555C789226AFBAA3006A2958 /* NotificationDeepLinkActionModel.swift in Sources */,

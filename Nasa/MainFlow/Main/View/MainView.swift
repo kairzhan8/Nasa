@@ -12,7 +12,7 @@ import Alamofire
 class MainView: UIView {
     
     private let tableView = UITableView()
-    var images = [UIImage]()
+    var images = [Photo]()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -32,9 +32,11 @@ class MainView: UIView {
     }
     
     private func configureView() {
-        tableView.backgroundColor = .red
+        tableView.separatorStyle = .none
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.register(PhotoCell.self, forCellReuseIdentifier: "image")
+        tableView.rowHeight = 100
     }}
 
 extension MainView: UITableViewDataSource, UITableViewDelegate {
@@ -45,9 +47,8 @@ extension MainView: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "image", for: indexPath) as! PhotoCell
-        let image = images[indexPath.row]
+        let image = images[indexPath.row].img_src
         cell.setImage(image: image)
         return cell
     }
-    
 }

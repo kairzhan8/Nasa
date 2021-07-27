@@ -19,7 +19,7 @@ enum MainTarget: ApiTarget {
     }
     
     var path: String {
-        return "/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&page=1&api_key=DEMO_KEY"
+        return "mars-photos/api/v1/rovers/curiosity/photos"
     }
     
     var method: HTTPMethod {

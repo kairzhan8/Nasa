@@ -29,6 +29,7 @@ final class MainViewController: UIViewController, ViewHolder, MainModule {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.title = "NASA photos"
         bindView()
     }
     
@@ -39,7 +40,7 @@ final class MainViewController: UIViewController, ViewHolder, MainModule {
         
         res.element
             .subscribe(onNext: { [unowned self] res in
-                
+                self.rootView.images = res.photos
             }).disposed(by: bag)
         
         res.loading
