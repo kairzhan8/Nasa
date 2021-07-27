@@ -19,7 +19,6 @@ class PhotoCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupInitialLayouts()
-        configureView()
     }
     
     required init?(coder: NSCoder) {
@@ -33,9 +32,6 @@ class PhotoCell: UITableViewCell {
             make.left.right.equalToSuperview()
             make.height.equalTo(295)
         }
-    }
-    
-    private func configureView() {
     }
     
     func setImage(image: String) {

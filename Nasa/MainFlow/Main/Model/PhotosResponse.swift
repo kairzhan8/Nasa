@@ -8,5 +8,5 @@
 import Foundation
 
 struct PhotosResponse: Codable {
-    dynamic var photos: [Photo]
+    let photos: [Photo]
 }

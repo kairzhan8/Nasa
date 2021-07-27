@@ -11,7 +11,6 @@
 		550ADF2326AFC3C20061BEFA /* CallBack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550ADF2226AFC3C20061BEFA /* CallBack.swift */; };
 		550ADF2726AFC45E0061BEFA /* StatusBarHeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550ADF2626AFC45E0061BEFA /* StatusBarHeight.swift */; };
 		550ADF2B26AFC4890061BEFA /* SetAnchors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550ADF2A26AFC4890061BEFA /* SetAnchors.swift */; };
-		550ADF5826AFDA960061BEFA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550ADF5726AFDA960061BEFA /* ViewController.swift */; };
 		550ADF5C26AFE3070061BEFA /* PhotosResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550ADF5B26AFE3070061BEFA /* PhotosResponse.swift */; };
 		550ADF5F26AFE3790061BEFA /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550ADF5E26AFE3790061BEFA /* Photo.swift */; };
 		550ADF6826B01B360061BEFA /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550ADF6726B01B360061BEFA /* StorageManager.swift */; };
@@ -97,7 +96,6 @@
 		550ADF2226AFC3C20061BEFA /* CallBack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallBack.swift; sourceTree = "<group>"; };
 		550ADF2626AFC45E0061BEFA /* StatusBarHeight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusBarHeight.swift; sourceTree = "<group>"; };
 		550ADF2A26AFC4890061BEFA /* SetAnchors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetAnchors.swift; sourceTree = "<group>"; };
-		550ADF5726AFDA960061BEFA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		550ADF5B26AFE3070061BEFA /* PhotosResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosResponse.swift; sourceTree = "<group>"; };
 		550ADF5E26AFE3790061BEFA /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		550ADF6726B01B360061BEFA /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
@@ -278,7 +276,6 @@
 				555C779026AED93C006A2958 /* Assets.xcassets */,
 				555C779226AED93C006A2958 /* LaunchScreen.storyboard */,
 				555C779526AED93C006A2958 /* Info.plist */,
-				550ADF5726AFDA960061BEFA /* ViewController.swift */,
 			);
 			path = Nasa;
 			sourceTree = "<group>";
@@ -786,7 +783,6 @@
 				555C77D126AFAF7B006A2958 /* NasaLogger+HTTP.swift in Sources */,
 				555C789026AFBAA3006A2958 /* DeepLinkAction.swift in Sources */,
 				555C784F26AFB6CF006A2958 /* Observable+Timer.swift in Sources */,
-				550ADF5826AFDA960061BEFA /* ViewController.swift in Sources */,
 				555C789426AFBAA3006A2958 /* Router.swift in Sources */,
 				555C789826AFBAA3006A2958 /* CardSegue.swift in Sources */,
 				555C785F26AFB715006A2958 /* UiViewController+Keyboard.swift in Sources */,

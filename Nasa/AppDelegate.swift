@@ -35,7 +35,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             fatalError("rootViewController must be CoordinatorNavigationController")
         }
         appCoordinator = AppCoordinator(router: Router(rootController: rootController), container: assembler.resolver)
-        //assembler.resolver.resolve(AuthStateObserver.self)!.setCoordinator(appCoordinator)
         appCoordinator?.start()
     }
     

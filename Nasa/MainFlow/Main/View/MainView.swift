@@ -11,9 +11,7 @@ import Alamofire
 import RealmSwift
 
 class MainView: UIView {
-    
     var imageTapped: ((String) -> Void)?
-    
     let tableView = UITableView()
     var images: Results<Photo>?
     

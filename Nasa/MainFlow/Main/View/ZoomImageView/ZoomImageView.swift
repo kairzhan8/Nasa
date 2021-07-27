@@ -25,11 +25,12 @@ class ZoomImageView: UIScrollView {
         addSubview(imageView)
         imageView.snp.makeConstraints { (make) in
             make.edges.equalToSuperview()
+            make.size.equalToSuperview()
         }
     }
     
     private func configureView() {
-        imageView.contentMode = .scaleToFill
+        imageView.contentMode = .scaleAspectFill
         minimumZoomScale = 1
         maximumZoomScale = 3
         showsHorizontalScrollIndicator = false

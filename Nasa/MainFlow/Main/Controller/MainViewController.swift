@@ -65,15 +65,22 @@ final class MainViewController: UIViewController, ViewHolder, MainModule {
         }
         
         rootView.imageTapped = { [unowned self] image in
-            let newImageView = ZoomImageView()
-            newImageView.setImage(image: image)
-            newImageView.frame = self.view.frame
-            newImageView.backgroundColor = .black
-            newImageView.isUserInteractionEnabled = true
-            let tap = UITapGestureRecognizer(target: self, action: #selector(dismissFullscreenImage))
-            newImageView.addGestureRecognizer(tap)
-            self.view.addSubview(newImageView)
+            self.showCurrentImage(image: image)
         }
+    }
+    
+    private func showCurrentImage(image: String) {
+        let imageView = ZoomImageView()
+        imageView.setImage(image: image)
+        let screenSize: CGRect = UIScreen.main.bounds
+        let screenWidth = screenSize.width
+        let screenHeight = screenSize.height
+        imageView.frame = CGRect(x: 0, y: 0, width: screenWidth, height: screenHeight)
+        imageView.backgroundColor = .black
+        imageView.isUserInteractionEnabled = true
+        let tap = UITapGestureRecognizer(target: self, action: #selector(dismissFullscreenImage))
+        imageView.addGestureRecognizer(tap)
+        self.view.addSubview(imageView)
     }
     
     @objc private func dismissFullscreenImage(sender: UITapGestureRecognizer) {
