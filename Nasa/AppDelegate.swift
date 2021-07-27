@@ -24,9 +24,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     private func setupWindow() {
-        self.window = UIWindow(frame: UIScreen.main.bounds)
-        self.window?.rootViewController = CoordinatorNavigationController(backBarButtonImage: nil)
-        self.window?.makeKeyAndVisible()
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = CoordinatorNavigationController(backBarButtonImage: nil)
+        window?.makeKeyAndVisible()
     }
     
     private func makeCoordinator(application: UIApplication) {
@@ -34,6 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             fatalError("rootViewController must be CoordinatorNavigationController")
         }
         appCoordinator = AppCoordinator(router: Router(rootController: rootController), container: assembler.resolver)
+        //assembler.resolver.resolve(AuthStateObserver.self)!.setCoordinator(appCoordinator)
         appCoordinator?.start()
     }
     
