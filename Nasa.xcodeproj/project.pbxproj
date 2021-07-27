@@ -14,6 +14,9 @@
 		550ADF5826AFDA960061BEFA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550ADF5726AFDA960061BEFA /* ViewController.swift */; };
 		550ADF5C26AFE3070061BEFA /* PhotosResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550ADF5B26AFE3070061BEFA /* PhotosResponse.swift */; };
 		550ADF5F26AFE3790061BEFA /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550ADF5E26AFE3790061BEFA /* Photo.swift */; };
+		550ADF6826B01B360061BEFA /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550ADF6726B01B360061BEFA /* StorageManager.swift */; };
+		550ADF7D26B025730061BEFA /* Connectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550ADF7C26B025730061BEFA /* Connectivity.swift */; };
+		550ADF8D26B033770061BEFA /* ZoomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550ADF8C26B033770061BEFA /* ZoomImageView.swift */; };
 		555C778826AED93A006A2958 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555C778726AED93A006A2958 /* AppDelegate.swift */; };
 		555C779126AED93C006A2958 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 555C779026AED93C006A2958 /* Assets.xcassets */; };
 		555C779426AED93C006A2958 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 555C779226AED93C006A2958 /* LaunchScreen.storyboard */; };
@@ -97,6 +100,9 @@
 		550ADF5726AFDA960061BEFA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		550ADF5B26AFE3070061BEFA /* PhotosResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosResponse.swift; sourceTree = "<group>"; };
 		550ADF5E26AFE3790061BEFA /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		550ADF6726B01B360061BEFA /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		550ADF7C26B025730061BEFA /* Connectivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connectivity.swift; sourceTree = "<group>"; };
+		550ADF8C26B033770061BEFA /* ZoomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomImageView.swift; sourceTree = "<group>"; };
 		555C778426AED93A006A2958 /* Nasa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nasa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		555C778726AED93A006A2958 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		555C779026AED93C006A2958 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -219,6 +225,30 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		550ADF6626B01B290061BEFA /* StorageManager */ = {
+			isa = PBXGroup;
+			children = (
+				550ADF6726B01B360061BEFA /* StorageManager.swift */,
+			);
+			path = StorageManager;
+			sourceTree = "<group>";
+		};
+		550ADF7B26B025430061BEFA /* InternetConnection */ = {
+			isa = PBXGroup;
+			children = (
+				550ADF7C26B025730061BEFA /* Connectivity.swift */,
+			);
+			path = InternetConnection;
+			sourceTree = "<group>";
+		};
+		550ADF8B26B0334E0061BEFA /* ZoomImageView */ = {
+			isa = PBXGroup;
+			children = (
+				550ADF8C26B033770061BEFA /* ZoomImageView.swift */,
+			);
+			path = ZoomImageView;
+			sourceTree = "<group>";
+		};
 		555C777B26AED93A006A2958 = {
 			isa = PBXGroup;
 			children = (
@@ -264,6 +294,7 @@
 		555C77A426AEDD29006A2958 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				550ADF6626B01B290061BEFA /* StorageManager */,
 				550ADF5A26AFE2D00061BEFA /* Model */,
 				555C78B426AFBC85006A2958 /* Module */,
 				555C78A826AFBB6C006A2958 /* Coordinator */,
@@ -278,6 +309,7 @@
 		555C77A526AEDD38006A2958 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				550ADF8B26B0334E0061BEFA /* ZoomImageView */,
 				555C77A626AEDD41006A2958 /* MainView.swift */,
 				555C77CA26AFAF47006A2958 /* Cell */,
 			);
@@ -287,6 +319,7 @@
 		555C77B426AEDF2E006A2958 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				550ADF7B26B025430061BEFA /* InternetConnection */,
 				550ADF2926AFC4890061BEFA /* Anchors */,
 				550ADF2526AFC45E0061BEFA /* StatusBar */,
 				550ADF2126AFC3C20061BEFA /* CallBack */,
@@ -740,7 +773,9 @@
 				555C77FE26AFB12E006A2958 /* ApiServiceAssemblyImpl.swift in Sources */,
 				555C78CD26AFBE91006A2958 /* DependencyContainerAssembly.swift in Sources */,
 				555C77FB26AFB12E006A2958 /* Requestable.swift in Sources */,
+				550ADF7D26B025730061BEFA /* Connectivity.swift in Sources */,
 				555C785B26AFB715006A2958 /* UIStackView+Init.swift in Sources */,
+				550ADF8D26B033770061BEFA /* ZoomImageView.swift in Sources */,
 				555C789B26AFBAA3006A2958 /* SlidingPresentationController.swift in Sources */,
 				555C784B26AFB6CF006A2958 /* UIScrollView+ReachedBottom.swift in Sources */,
 				555C784D26AFB6CF006A2958 /* LoadingSequence+RX.swift in Sources */,
@@ -756,6 +791,7 @@
 				555C789826AFBAA3006A2958 /* CardSegue.swift in Sources */,
 				555C785F26AFB715006A2958 /* UiViewController+Keyboard.swift in Sources */,
 				555C780B26AFB12E006A2958 /* ApiRequest.swift in Sources */,
+				550ADF6826B01B360061BEFA /* StorageManager.swift in Sources */,
 				555C783D26AFB662006A2958 /* MainViewModel.swift in Sources */,
 				555C785E26AFB715006A2958 /* UITableView+Reuse.swift in Sources */,
 				555C77D326AFAF7B006A2958 /* LoggerConfigurator.swift in Sources */,
@@ -950,6 +986,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 68F942NMT8;
 				INFOPLIST_FILE = Nasa/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -970,6 +1007,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 68F942NMT8;
 				INFOPLIST_FILE = Nasa/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

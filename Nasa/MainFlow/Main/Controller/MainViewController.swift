@@ -7,6 +7,7 @@
 
 import UIKit
 import RxSwift
+import Alamofire
 
 final class MainViewController: UIViewController, ViewHolder, MainModule {
     typealias RootViewType = MainView
@@ -34,24 +35,48 @@ final class MainViewController: UIViewController, ViewHolder, MainModule {
     }
     
     private func bindView() {
-        let output = viewModel.transform(input: .init(loadImages: .just(())))
+        if Connectivity.isConnectedToInternet {
+            let output = viewModel.transform(input: .init(loadImages: .just(())))
+            
+            let res = output.res.publish()
+            
+            res.element
+                .subscribe(onNext: { [unowned self] res in
+                    let photos = realm.objects(Photo.self)
+                    StorageManager.deletePhotos(photos)
+                    StorageManager.savePhotos(res.photos)
+                    self.rootView.images = realm.objects(Photo.self)
+                    self.rootView.tableView.reloadData()
+                }).disposed(by: bag)
+            
+            res.loading
+                .bind(to: ProgressView.instance.rx.loading)
+                .disposed(by: bag)
+            
+            res.errors
+                .bind(to: rx.error)
+                .disposed(by: bag)
+            
+            res.connect()
+                .disposed(by: bag)
+         } else {
+            self.rootView.images = realm.objects(Photo.self)
+            self.rootView.tableView.reloadData()
+        }
         
-        let res = output.res.publish()
-        
-        res.element
-            .subscribe(onNext: { [unowned self] res in
-                self.rootView.images = res.photos
-            }).disposed(by: bag)
-        
-        res.loading
-            .bind(to: ProgressView.instance.rx.loading)
-            .disposed(by: bag)
-        
-        res.errors
-            .bind(to: rx.error)
-            .disposed(by: bag)
-        
-        res.connect()
-            .disposed(by: bag)
+        rootView.imageTapped = { [unowned self] image in
+            let newImageView = ZoomImageView()
+            newImageView.setImage(image: image)
+            newImageView.frame = self.view.frame
+            newImageView.backgroundColor = .black
+            newImageView.isUserInteractionEnabled = true
+            let tap = UITapGestureRecognizer(target: self, action: #selector(dismissFullscreenImage))
+            newImageView.addGestureRecognizer(tap)
+            self.view.addSubview(newImageView)
+        }
+    }
+    
+    @objc private func dismissFullscreenImage(sender: UITapGestureRecognizer) {
+        sender.view?.removeFromSuperview()
     }
 }

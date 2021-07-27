@@ -16,5 +16,6 @@ target 'Nasa' do
   pod 'SnapKit', '~> 5.0.0'
   pod 'Willow', '~> 6.0'
   pod 'SwiftMessages', '8.0.3'
+  pod 'RealmSwift'
 
 end

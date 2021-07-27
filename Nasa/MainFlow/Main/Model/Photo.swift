@@ -5,8 +5,8 @@
 //  Created by kairzhan on 7/27/21.
 //
 
-import Foundation
+import RealmSwift
 
-struct Photo: Codable {
-    let img_src: String
+class Photo: Object, Codable {
+    @objc dynamic var img_src: String
 }
